@@ -2,49 +2,49 @@ const recipes = [
     {
         id: 1,
         title: "Spaghetti Carbonara",
-        image: "spaghetti_carbonara.jpg",
+        image: "images/spaghetti_carbonara.jpg",
         ingredients: ["Spaghetti", "Eggs", "Bacon", "Parmesan cheese", "Garlic", "Black pepper"],
         instructions: "Cook spaghetti according to package instructions. Meanwhile, fry bacon until crispy. In a bowl, whisk eggs, grated Parmesan cheese, minced garlic, and black pepper. Drain cooked spaghetti and toss in the egg mixture. Add cooked bacon and mix well. Serve hot."
     },
     {
         id: 2,
         title: "Chicken Alfredo",
-        image: "chicken_alfredo.jpg",
+        image: "images/chicken_alfredo.jpg",
         ingredients: ["Fettuccine", "Chicken breast", "Heavy cream", "Butter", "Garlic", "Parmesan cheese"],
         instructions: "Cook fettuccine according to package instructions. In a skillet, cook diced chicken breast until no longer pink. Add minced garlic and cook until fragrant. Pour in heavy cream and simmer until thickened. Stir in grated Parmesan cheese and cooked fettuccine. Serve hot."
     },
     {
         id: 3,
         title: "Pesto Pasta",
-        image: "pesto_pasta.jpg",
+        image: "images/pesto_pasta.jpg",
         ingredients: ["Pasta of your choice", "Fresh basil leaves", "Pine nuts", "Garlic", "Parmesan cheese", "Olive oil", "Salt", "Black pepper"],
         instructions: "Cook pasta of your choice according to package instructions. In a food processor, combine fresh basil leaves, pine nuts, minced garlic, grated Parmesan cheese, olive oil, salt, and black pepper. Blend until smooth to make the pesto sauce. Toss cooked pasta with the pesto sauce until well coated. Serve warm or at room temperature."
     },
     {
         id: 4,
         title: "Lemon Garlic Shrimp Linguine",
-        image: "lemon_garlic_shrimps.jpeg",
+        image: "images/lemon_garlic_shrimps.jpeg",
         ingredients: ["Linguine pasta", "Shrimp", "Butter", "Olive oil", "Garlic", "Lemon juice", "Lemon zest", "Red pepper flakes", "Salt", "Black pepper", "Fresh parsley"],
         instructions: "Cook linguine pasta according to package instructions. In a skillet, heat butter and olive oil over medium heat. Add minced garlic and red pepper flakes, then cook until fragrant. Add shrimp and cook until pink and opaque. Stir in lemon juice and lemon zest, then season with salt and black pepper. Toss cooked linguine with the shrimp mixture and chopped fresh parsley. Serve immediately."
     },
     {
         id: 5,
         title: "Margherita Pizza",
-        image: "margherita-pizza.jpg",
+        image: "images/margherita-pizza.jpg",
         ingredients: ["Pizza dough", "Tomato sauce", "Fresh mozzarella cheese", "Fresh basil leaves", "Olive oil", "Salt", "Black pepper"],
         instructions: "Preheat oven to 475°F (245°C). Roll out pizza dough on a baking sheet. Spread tomato sauce evenly over the dough. Tear fresh mozzarella cheese and distribute it over the sauce. Sprinkle with torn fresh basil leaves, then drizzle with olive oil. Season with salt and black pepper. Bake in the preheated oven for 12-15 minutes, or until crust is golden and cheese is bubbly. Slice and serve hot."
     },
     {
         id: 6,
         title: "Beef Tacos",
-        image: "beef_tacos.jpg",
+        image: "images/beef_tacos.jpg",
         ingredients: ["Ground beef", "Taco seasoning", "Taco shells", "Lettuce", "Tomatoes", "Onions", "Shredded cheese", "Sour cream", "Salsa", "Avocado (optional)"],
         instructions: "In a skillet, cook ground beef over medium heat until browned. Drain excess fat and stir in taco seasoning according to package instructions. Heat taco shells according to package instructions. Assemble tacos by filling each shell with cooked ground beef, shredded lettuce, diced tomatoes, chopped onions, shredded cheese, sour cream, salsa, and sliced avocado if desired. Serve immediately."
     },
     {
         id: 7,
         title: "Chicken Stir-Fry",
-        image: "chickenstir_fry.jpg",
+        image: "images/chickenstir_fry.jpg",
         ingredients: ["Chicken breast", "Vegetables (such as bell peppers, broccoli, carrots, and snap peas)", "Soy sauce", "Sesame oil", "Garlic", "Ginger", "Cornstarch", "Rice or noodles"],
         instructions: "Slice chicken breast into thin strips. In a wok or large skillet, heat sesame oil over medium-high heat. Add minced garlic and ginger, then stir-fry until fragrant. Add chicken strips and cook until no longer pink. Add chopped vegetables and stir-fry until tender-crisp. In a small bowl, mix soy sauce and cornstarch, then add to the wok. Cook until the sauce thickens and coats the chicken and vegetables. Serve hot over rice or noodles."
     }
