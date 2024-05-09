@@ -63,8 +63,11 @@ main {
 }
 
 #recipeImage {
-    max-width: 100%;
-    height: auto;
+
+        width: 200px; /* Set a fixed width */
+        height: 150px; /* Set a fixed height */
+    
+    
     margin-bottom: 20px;
 }
 

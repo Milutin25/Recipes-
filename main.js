@@ -51,36 +51,11 @@ const recipes = [
 ];
 
 
-const searchRecipe = document.getElementById("searchInput");
-const displaySearchResult = document.getElementById("searchResults");
-const recipeDetails = document.getElementById("recipeDetails"); 
-const recipeTitle = document.getElementById('recipeTitle');
-const recipeImage = document.getElementById('recipeImage');
-const recipeIngredients = document.getElementById('recipeIngredients');
-const recipeInstructions = document.getElementById('recipeInstructions');
-const saveRecipeBtn = document.getElementById('saveRecipe');
 
-const button = document.getElementById("submit"); 
 
-button.addEventListener('click', () => {
-    const searchRecipe = document.getElementById("searchInput").value.trim().toLowerCase();
+function displaySearchResults(foundRecipes) {
     const displaySearchResult = document.getElementById("searchResults");
-    let foundRecipes = []; 
-    
-    recipes.forEach(recipe => {
-        let found = false; 
-        recipe.ingredients.forEach(ingredient => {
-            const filterIngredient = ingredient.trim().toLowerCase(); 
-            if (searchRecipe === filterIngredient) {
-                foundRecipes.push(recipe); 
-                found = true; 
-            }
-        });
-        
-        if (found) {
-            displaySearchResult.innerHTML = "";
-        }
-    });
+    displaySearchResult.innerHTML = "";
 
     if (foundRecipes.length === 0) {
         displaySearchResult.innerHTML = "No recipes found.";
@@ -93,8 +68,39 @@ button.addEventListener('click', () => {
                 <h3>${recipe.title}</h3>
                 <p>Ingredients: ${recipe.ingredients.join(", ")}</p>
                 <p>${recipe.instructions}</p>
+                <button onclick="addToFavorites(${recipe.id})">Add to favorites</button>
             `;
             displaySearchResult.appendChild(listItem);
         });
     }
+}
+
+document.getElementById("submit").addEventListener('click', () => {
+    const searchRecipe = document.getElementById("searchInput").value.trim().toLowerCase();
+    let foundRecipes = []; 
+
+    recipes.forEach(recipe => {
+        recipe.ingredients.forEach(ingredient => {
+            const filterIngredient = ingredient.trim().toLowerCase(); 
+            if (searchRecipe === filterIngredient) {
+                foundRecipes.push(recipe); 
+            }
+        });
+    });
+
+    displaySearchResults(foundRecipes);
 });
+
+
+function addToFavorites(recipeId) {
+    const recipe = recipes.find(recipe => recipe.id === recipeId);
+    if (!recipe) return;
+
+    const favoriteRecipesList = document.getElementById('favorites');
+    const clonedRecipe = document.createElement('li');
+    clonedRecipe.innerHTML = `
+        <h3>${recipe.title}</h3>
+    `;
+    favoriteRecipesList.appendChild(clonedRecipe);
+}
+
