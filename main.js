@@ -23,14 +23,14 @@ const recipes = [
     {
         id: 4,
         title: "Lemon Garlic Shrimp Linguine",
-        image: "images/lemon_garlic_shrimps.jpg",
+        image: "images/lemon_garlic_shrimps.jpeg",
         ingredients: ["Linguine pasta", "Shrimp", "Butter", "Olive oil", "Garlic", "Lemon juice", "Lemon zest", "Red pepper flakes", "Salt", "Black pepper", "Fresh parsley"],
         instructions: "Cook linguine pasta according to package instructions. In a skillet, heat butter and olive oil over medium heat. Add minced garlic and red pepper flakes, then cook until fragrant. Add shrimp and cook until pink and opaque. Stir in lemon juice and lemon zest, then season with salt and black pepper. Toss cooked linguine with the shrimp mixture and chopped fresh parsley. Serve immediately."
     },
     {
         id: 5,
         title: "Margherita Pizza",
-        image: "images/margherita_pizza.jpg",
+        image: "images/margherita-pizza.jpg",
         ingredients: ["Pizza dough", "Tomato sauce", "Fresh mozzarella cheese", "Fresh basil leaves", "Olive oil", "Salt", "Black pepper"],
         instructions: "Preheat oven to 475°F (245°C). Roll out pizza dough on a baking sheet. Spread tomato sauce evenly over the dough. Tear fresh mozzarella cheese and distribute it over the sauce. Sprinkle with torn fresh basil leaves, then drizzle with olive oil. Season with salt and black pepper. Bake in the preheated oven for 12-15 minutes, or until crust is golden and cheese is bubbly. Slice and serve hot."
     },
@@ -44,7 +44,7 @@ const recipes = [
     {
         id: 7,
         title: "Chicken Stir-Fry",
-        image: "images/chicken_stir_fry.jpg",
+        image: "images/chickenstir_fry.jpg",
         ingredients: ["Chicken breast", "Vegetables (such as bell peppers, broccoli, carrots, and snap peas)", "Soy sauce", "Sesame oil", "Garlic", "Ginger", "Cornstarch", "Rice or noodles"],
         instructions: "Slice chicken breast into thin strips. In a wok or large skillet, heat sesame oil over medium-high heat. Add minced garlic and ginger, then stir-fry until fragrant. Add chicken strips and cook until no longer pink. Add chopped vegetables and stir-fry until tender-crisp. In a small bowl, mix soy sauce and cornstarch, then add to the wok. Cook until the sauce thickens and coats the chicken and vegetables. Serve hot over rice or noodles."
     }
