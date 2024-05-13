@@ -50,9 +50,25 @@ const recipes = [
     }
 ];
 
+
+function displayAllRecipeTitles() {
+    document.getElementById("favorites").classList.add("hidden");
+    const recipeTitlesContainer = document.getElementById("recipesShown");
+    recipes.forEach(recipe => {
+        const titleItem = document.createElement("p");
+        titleItem.textContent = recipe.title;
+        recipeTitlesContainer.appendChild(titleItem);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    displayAllRecipeTitles();
+});
+
 const button = document.getElementById("submit"); 
 
 button.addEventListener('click', () => {
+    document.getElementById("recipesShown").classList.add("hidden");
     const searchRecipe = document.getElementById("searchInput").value.trim().toLowerCase();
     const displaySearchResult = document.getElementById("searchResults");
     let foundRecipes = []; 
@@ -73,7 +89,8 @@ button.addEventListener('click', () => {
     });
 
     if (foundRecipes.length === 0) {
-        displaySearchResult.innerHTML = "No recipes found."
+
+        displaySearchResult.innerHTML ="<p style='color: white;'>No recipes found.</p>";
     } else { 
         foundRecipes.forEach(recipe => { 
         const listItem = document.createElement("li");
@@ -90,9 +107,12 @@ button.addEventListener('click', () => {
     };
 });
 
+const favoriteRecipeIds = new Set();
+
 function addToFavorites(recipeId) {
+    document.getElementById("favorites").classList.remove("hidden");
     const recipe = recipes.find(recipe => recipe.id === recipeId);
-    if (!recipe) return;
+    if (!recipe || favoriteRecipeIds.has(recipeId)) return;
 
     const favoriteRecipesList = document.getElementById('favorites');
     const clonedRecipe = document.createElement('li');
@@ -100,8 +120,9 @@ function addToFavorites(recipeId) {
     clonedRecipe.innerHTML = `
         <h3>${recipe.title}</h3>
         <img src="${recipe.image}" alt="${recipe.title}" width="50%">
-        `
-    ;
+    `;
     favoriteRecipesList.appendChild(clonedRecipe);
+
+    favoriteRecipeIds.add(recipeId);
 }
 

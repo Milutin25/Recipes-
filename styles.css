@@ -27,7 +27,7 @@ nav ul li a {
 
 main {
     padding: 20px;
-    background-image: url("images/board5.jpeg");
+    background-image: url("images/board3.jpeg");
     background-size:cover;
 }
 
@@ -36,19 +36,14 @@ main {
     padding: 10px;
     margin-bottom: 20px;
 }
-
-#searchResults {
+#searchResults li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color:whitesmoke;
     list-style-type: none;
     padding: 0;
     color:#f0f0f0;
 }
-
-#searchResults li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    color:#f0f0f0;
-}
-
 #recipeDetails {
     display: flex;
     flex-direction: column;
@@ -100,6 +95,15 @@ footer {
 .cloned img{
     width: 20%;
     border-radius: 5px;
+}
+.hidden{
+    display:none;
+}
+#recipesShown{
+    color:whitesmoke
+}
+#favorites{
+    color:whitesmoke;
 }
 @media screen and (max-width: 768px) {
     nav ul li {
