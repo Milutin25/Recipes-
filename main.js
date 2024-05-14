@@ -50,13 +50,31 @@ const recipes = [
     }
 ];
 
-
 function displayAllRecipeTitles() {
-    document.getElementById("favorites").classList.add("hidden");
     const recipeTitlesContainer = document.getElementById("recipesShown");
+    
+    
     recipes.forEach(recipe => {
         const titleItem = document.createElement("p");
+        titleItem.classList.add("titleItem");
         titleItem.textContent = recipe.title;
+        
+        titleItem.addEventListener("click", function() {
+            
+            const selectedRecipe = recipes.find(recipe => recipe.title === titleItem.textContent);
+            
+            const recipeDetailsContainer = document.getElementById("recipeDetails");
+            recipeDetailsContainer.innerHTML = `
+                <h2>${selectedRecipe.title}</h2>
+                <img src="${selectedRecipe.image}" width=50% alt="${selectedRecipe.title}">
+                <p><strong>Ingredients:</strong> ${selectedRecipe.ingredients.join(", ")}</p>
+                <p><strong>Instructions:</strong> ${selectedRecipe.instructions}</p>
+                <button onclick="addToFavorites(${selectedRecipe.id})">Add to Favorites</button>
+                `;
+            document.getElementById("recipesShown").classList.add("hidden");
+            document.getElementById("favorites").classList.add("hidden");
+            recipeDetailsContainer.classList.remove("hidden");
+        });
         recipeTitlesContainer.appendChild(titleItem);
     });
 }
@@ -102,6 +120,7 @@ button.addEventListener('click', () => {
         <p>${recipe.instructions}</p>
         <button onClick="addToFavorites(${recipe.id})">Add to favourites <i class="fa-regular fa-heart"></i></button>
         `;
+        document.getElementById("recipeDetails").classList.add("hidden");
         displaySearchResult.appendChild(listItem);
     });
     };
@@ -126,3 +145,4 @@ function addToFavorites(recipeId) {
     favoriteRecipeIds.add(recipeId);
 }
 
+ 
